@@ -86,7 +86,7 @@ console.log(cumleKur("Hello", " World!"))
 /* (Oto test var) cumleKur fonksiyonuna 5 parametre göndererek "Ben iyi bir yazılımcı olacağım!" stringini elde edin, sonucu `bircumle` değişkenine atayın ve konsolde gözlemleyin */
 
 var bircumle;
-bircumle = cumleKur("Ben ", "iyi ", "bir ", "yazılımcı ", "olacağım! ");
+bircumle = cumleKur("Ben ", "iyi ", "bir ", "yazılımcı ", "olacağım!");
 console.log(bircumle);
 
 /* kodlar buraya */
@@ -107,7 +107,7 @@ console.log(bircumle);
 	*/
 	
 
-function cumlelereDonustur(cumleler, ayrac = " , "){
+function cumlelereDonustur(cumleler, ayrac = ","){
 	let cumleDizisi = cumleler.map(cumle => cumle.join(ayrac));
 	return cumleDizisi;
 }
@@ -127,12 +127,12 @@ console.log(yeniDizi);
 	*/
 	
 function paragrafOlustur(cumleler, cumleKur, cumlelereDonustur){
-	let dahaYeniDizi = cumlelereDonustur(cumleler, ayrac = " " );
-	let paragraf = dahaYeniDizi.filter((x,index) => index % 2 !== 0).slice(0,5)
+	let dahaYeniDizi = cumlelereDonustur(cumleler, " ");
+	let paragraf = dahaYeniDizi.filter((x,index) => index % 2 !== 0).slice(0,5).join("")
 	return paragraf;
 }
 const paragraf = paragrafOlustur(cumleler, cumleKur, cumlelereDonustur);
-console.log(paragraf);
+console.log("GÖREV 2", paragraf);
 
 /* 	GÖREV 3:
 		Yukarıda isimleri sebzeler ve meyveler olan 2 dizi bulunmaktadır. Bu dizileri kullanarak aşağıdaki görevleri tamamlayın.
@@ -152,8 +152,8 @@ console.log(meyveler);
 //3b çözümü
 /* kodlar buraya */
 
-meyveler.unshift("🐇");
-meyveler.push ("🦔");
+sebzeler.unshift("🐇");
+sebzeler.push ("🦔");
 
 console.log(meyveler);
 
